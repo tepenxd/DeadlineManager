@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/bg_color"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_animation_color"
+            android:layout_height="220dp">
+
+            <TextView
+                android:id="@+id/progress_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/open_sans"
+                android:text="98%"
+                android:textColor="@android:color/white"
+                android:textSize="70dp" />
+
+            <TextView
+                android:fontFamily="@font/open_sans"
+                android:layout_marginTop="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="28dp"
+                android:text="Overal Progress"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/what_to_do_btn"
+
+            android:layout_width="160dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="150dp"
+            android:onClick="onOpenWhatToDo_btn"
+            android:background="@drawable/what_to_do"
+            />
+
+
+        <ImageButton
+            android:id="@+id/add_task_btn"
+            android:background="@drawable/add_task"
+            android:onClick="addTask_btn"
+            android:layout_toRightOf="@id/what_to_do_btn"
+            android:layout_width="160dp"
+            android:layout_height="150dp" />
+
+        <ImageButton
+            android:id="@+id/completed_btn"
+            android:background="@drawable/completed"
+            android:onClick="completed_btn"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/add_task_btn"
+            android:layout_width="160dp"
+            android:layout_height="150dp" />
+
+        <ImageButton
+            android:id="@+id/settings_btn"
+            android:background="@drawable/settings"
+            android:onClick="onSettings_btn"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/completed_btn"
+            android:layout_below="@id/add_task_btn"
+            android:layout_width="160dp"
+            android:layout_height="150dp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="by Vision"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
